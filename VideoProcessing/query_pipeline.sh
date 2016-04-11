@@ -8,8 +8,7 @@ QUERY_RESULTS = ''
 TOP_N = 100
 
 # 1. Extract the keyframes from all the videos in video dir
-
-# 1.1. Preprocess the keyframes?
+python ./keyframe.py $VIDEOS_DIR $KEYFRAMES_DIR
 
 # 2. Obtain the NetVLAD feature vectors
 matlab /r "getFeatVects($KEYFRAMES_DIR, $QUERY_FEATS_DIR)"
