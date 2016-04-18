@@ -1,5 +1,5 @@
-function fileList = getFileList(dirName)
-  dirName = strcat(dirName,'/*.jpg')
+function fileList = getFileList(dirName, fileExt)
+  dirName = strcat(dirName, '/*', fileExt);
   dirData = dir(dirName);      %# Get the data for the current directory
   dirIndex = [dirData.isdir];  %# Find the index for directories
   fileList = {dirData(~dirIndex).name}';  %'# Get a list of the files
